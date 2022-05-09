@@ -35,7 +35,6 @@ time.sleep(2)
 for x in xmlroot.findall('channel/item'):
 
     # 글쓰기 버튼 클릭
-    print('글쓰기 버튼 클릭')
     browser.find_element_by_xpath('//*[@id="post-admin"]/a[1]').click()
     time.sleep(2)
 
@@ -65,4 +64,4 @@ for x in xmlroot.findall('channel/item'):
     browser.find_element_by_xpath('//*[@id="root"]/div/div[1]/div/div[3]/div[3]/div/div/div/div[8]/div/button').click()
 
     print('%s 발행 완료' % title)
-    time.sleep(10800)
+    time.sleep(7)
