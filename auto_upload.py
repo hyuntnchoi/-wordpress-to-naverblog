@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 
 # xml 가져오기
-xmlfile = ET.parse('data.xml')
+xmlfile = ET.parse('exported_data_from_wordpress.xml')
 xmlroot = xmlfile.getroot()
 ns = {'content': 'http://purl.org/rss/1.0/modules/content/'}
 
@@ -17,7 +17,7 @@ ns = {'content': 'http://purl.org/rss/1.0/modules/content/'}
 subprocess.Popen(['python', 'chrome_starter.py'])
 time.sleep(2)
 
-BLOG_URL = 'https://blog.naver.com/uto01111'
+BLOG_URL = 'http://blog.naver.com/myblog_address'
 
 ser = Service('C:\\mywork\\wordpress-to-naverblog-lib\\chromedriver_win32\\chromedriver.exe')
 chrome_options = webdriver.ChromeOptions()
