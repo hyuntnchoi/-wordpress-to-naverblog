@@ -7,9 +7,10 @@ import time
 import subprocess
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
+import os
 
 # xml 가져오기
-xmlfile = ET.parse('exported_data_from_wordpress.xml')
+xmlfile = ET.parse('exported_xml_data_from_wordpress.xml')
 xmlroot = xmlfile.getroot()
 ns = {'content': 'http://purl.org/rss/1.0/modules/content/'}
 
@@ -19,7 +20,7 @@ time.sleep(2)
 
 BLOG_URL = 'http://blog.naver.com/myblog_address'
 
-ser = Service('C:\\mywork\\wordpress-to-naverblog-lib\\chromedriver_win32\\chromedriver.exe')
+ser = Service('chromedriver.exe')
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 
